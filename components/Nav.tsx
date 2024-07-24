@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation";
-import path from "path";
+
 import Link from "next/link";
 
 const links = [
@@ -29,11 +29,14 @@ const links = [
 export default function Nav() {
   const pathname = usePathname();
   return (
-    <nav className="absolute duration-200 transition-all left-0 items-center justify-evenly top-[100%] w-full h-screen flex flex-col border">
+    <nav className="flex gap-8">
       {links.map((link, index) => {
         return (
           <Link
-            className="font-mono text-xl hover:text-blue-600 transition-all duration-150"
+            className={`${
+              link.path === pathname &&
+              "text-blue-600 border-b-2 border-blue-600"
+            } capitalize font-medium hover:text-blue-600 transition-colors duration-200`}
             key={index}
             href={link.path}
           >
