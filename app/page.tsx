@@ -11,7 +11,7 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pb-24">
           {/* Text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Web Developer</span>
+            <span className="text-slate-50 text-xl">Web Developer</span>
             <h1 className="h1 text-slate-50 mb-6">
               Hello Welcome to <br />
               <span className="font-mono text-blue-600">Misho's Dev Lab</span>
