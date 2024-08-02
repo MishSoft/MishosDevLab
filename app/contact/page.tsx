@@ -49,14 +49,14 @@ export default function Contact() {
       className="py-6"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-[30px]">
+        <div className="flex flex-col xl:flex-row gap-[60px]">
           {/* Form */}
           <div className="xl:h-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-slate-800 rounded-xl">
+            <form className="flex flex-col gap-8 p-10 bg-slate-800 rounded-xl">
               <h3 className="text-4xl text-blue-600">Let's work rogether</h3>
               <p className="text-white/60">
-                Hello welcome i am misho aspanidze and i want to get job from
-                you.
+                You can reach out to me through the form below, or connect with
+                me on social media. I'm looking forward to hearing from you!
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -85,7 +85,7 @@ export default function Contact() {
                 placeholder="Type your message here."
               />
               {/* btn */}
-              <Button size="md" className="max-w-40">
+              <Button size="md" disabled className="max-w-40">
                 Send message
               </Button>
             </form>

@@ -24,7 +24,7 @@ export default function Photo() {
         >
           <Image
             src="/photo.png"
-            className="object-contain"
+            className="object-contain rounded-full border-2 border-blue-600"
             fill
             priority
             quality={100}
