@@ -20,23 +20,61 @@ const projects = [
   {
     num: "01",
     categoriy: "frontend",
-    title: "project 1",
-    description: "",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/",
-    live: "",
-    github: "",
+    title: "GitHub Search Users",
+    description:
+      "This is an app where you can find users from GitHub, and show them repositories, followers, and other info. On the page, you can show the dark mode toggle button and change mode.",
+    stack: [{ name: "React" }, { name: "Tailwind" }, { name: "TypeScript" }],
+    image: "/devfinder.svg",
+    live: "https://github-search-users-six.vercel.app/",
+    github: "https://github.com/MishSoft/github-search-users",
   },
 
   {
     num: "02",
     categoriy: "frontend",
-    title: "project 1",
-    description: "",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/",
-    live: "",
-    github: "",
+    title: "Todo List App",
+    description:
+      "This is a Todo List app where you can add, check, or delete items. the app has an animation header, where images change and get real-time data.. also you can show time when adding items.",
+    stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
+    image: "/todo.png",
+    live: "https://todo-list-app-pi-ochre.vercel.app/",
+    github: "https://github.com/MishSoft/todo-list-app",
+  },
+
+  {
+    num: "03",
+    categoriy: "frontend",
+    title: "Real Time Clock App",
+    description:
+      "Here you are the Real-time clock app, which shows you the date and the weather. This app's background image always changes and gets beautiful photos. also, you can see quotes in the header.",
+    stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
+    image: "/realtimeclock.png",
+    live: "https://clock-app-pied-psi.vercel.app/",
+    github: "https://github.com/MishSoft/clock-app",
+  },
+
+  {
+    num: "04",
+    categoriy: "frontend",
+    title: "Word Converter",
+    description:
+      "This app helps to get text from images. it creates a docx file and adds that text which is uploaded to you. this app has to change the language section, which helps then when you upload text in another language. for example: EN GEO or RUS ",
+    stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
+    image: "/converterapp.png",
+    live: "https://pdf-converter-pearl.vercel.app/",
+    github: "https://github.com/MishSoft/pdf-converter",
+  },
+
+  {
+    num: "05",
+    categoriy: "frontend",
+    title: "Interactive Card",
+    description:
+      "Fill in the form and see the card details update in real time Receive error messages when the form is submitted if:Any input field is empty, The card number, expiry date, or CVC fields are in the wrong format. View the optimal layout depending on their device's screen sizeSee hover, active, and focus states for interactive elements on the page.",
+    stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
+    image: "/card.png",
+    live: "https://polite-raindrop-1abb1e.netlify.app/",
+    github: "https://github.com/MishSoft/interactive-card",
   },
 ];
 
@@ -62,11 +100,17 @@ export default function Projects() {
                 {project.num}
               </div>
               {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-blue-600 transition-all duration-200 capitalize">
-                {project.categoriy} project
-              </h2>
+              <div className="flex flex-col gap-5">
+                <h2 className="text-[25px] font-bold leading-none text-white group-hover:text-blue-600 transition-all duration-200 capitalize">
+                  {project.categoriy} project
+                </h2>
+                <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-blue-600 transition-all duration-200 capitalize">
+                  {project.title}
+                </h2>
+              </div>
+
               {/* project description */}
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-white/60 text-[18px]">{project.description}</p>
               {/* Stack */}
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
@@ -131,7 +175,7 @@ export default function Projects() {
                           src={project.image}
                           alt={`${project.title} image`}
                           fill
-                          className="object-cover"
+                          className=" w-full h-full object-cover bg-no-repeat"
                         />
                       </div>
                     </div>
