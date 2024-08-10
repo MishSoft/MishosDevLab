@@ -36,7 +36,7 @@ const projects = [
     description:
       "This is a Todo List app where you can add, check, or delete items. the app has an animation header, where images change and get real-time data.. also you can show time when adding items.",
     stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/todo.png",
+    image: "/todo.svg",
     live: "https://todo-list-app-pi-ochre.vercel.app/",
     github: "https://github.com/MishSoft/todo-list-app",
   },
@@ -48,7 +48,7 @@ const projects = [
     description:
       "Here you are the Real-time clock app, which shows you the date and the weather. This app's background image always changes and gets beautiful photos. also, you can see quotes in the header.",
     stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/realtimeclock.png",
+    image: "/clock.svg",
     live: "https://clock-app-pied-psi.vercel.app/",
     github: "https://github.com/MishSoft/clock-app",
   },
@@ -60,7 +60,7 @@ const projects = [
     description:
       "This app helps to get text from images. it creates a docx file and adds that text which is uploaded to you. this app has to change the language section, which helps then when you upload text in another language. for example: EN GEO or RUS ",
     stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/converterapp.png",
+    image: "/pdf.svg",
     live: "https://pdf-converter-pearl.vercel.app/",
     github: "https://github.com/MishSoft/pdf-converter",
   },
@@ -72,9 +72,41 @@ const projects = [
     description:
       "Fill in the form and see the card details update in real time Receive error messages when the form is submitted if:Any input field is empty, The card number, expiry date, or CVC fields are in the wrong format. View the optimal layout depending on their device's screen sizeSee hover, active, and focus states for interactive elements on the page.",
     stack: [{ name: "Vite" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/card.png",
+    image: "/card.svg",
     live: "https://polite-raindrop-1abb1e.netlify.app/",
     github: "https://github.com/MishSoft/interactive-card",
+  },
+
+  {
+    num: "06",
+    categoriy: "frontend",
+    title: "Monkey Shoulder (Whisky)",
+    description:
+      "Monkey Shoulder Whisky Website Welcome to the Monkey Shoulder Whisky project! This repository contains the code for a modern, engaging website designed to showcase the Monkey Shoulder Whisky brand. The website features various sections including an introduction, exploration of different drinks, detailed menu, and customer testimonials.",
+    stack: [
+      { name: "Next Js" },
+      { name: "TailwindCSS" },
+      { name: "Javascript" },
+    ],
+    image: "/monkeyshoulder.svg",
+    live: "https://monkeyshoulder-ad62-git-main-mishsofts-projects.vercel.app/",
+    github: "https://github.com/MishSoft/monkeyshoulder",
+  },
+
+  {
+    num: "07",
+    categoriy: "frontend",
+    title: "Voice Generator",
+    description:
+      "Description: This project is a simple web application built with React and Next.js that allows users to interact with speech recognition features in the browser. Users can start and stop speech recognition, and the app will transcribe their speech in real-time.",
+    stack: [
+      { name: "Next Js" },
+      { name: "TailwindCSS" },
+      { name: "TypeScript" },
+    ],
+    image: "/voicegenerator.svg",
+    live: "https://monkeyshoulder-ad62-git-main-mishsofts-projects.vercel.app/",
+    github: "https://github.com/MishSoft/monkeyshoulder",
   },
 ];
 
@@ -141,7 +173,7 @@ export default function Projects() {
                 </Link>
 
                 {/* Repo project button */}
-                <Link href={project.live}>
+                <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -166,16 +198,15 @@ export default function Projects() {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      {/* overlay */}
-                      <div></div>
+                    <div className=" relative group flex justify-center items-center bg-pink-50/20">
                       {/* image */}
-                      <div className="relative w-full h-full">
+                      <div className="relative flex items-center justify-center border w-full h-full">
                         <Image
                           src={project.image}
                           alt={`${project.title} image`}
-                          fill
-                          className=" w-full h-full object-cover bg-no-repeat"
+                          width={200}
+                          height={100}
+                          className="w-[100%] h-auto object-cover"
                         />
                       </div>
                     </div>
