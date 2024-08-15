@@ -108,6 +108,22 @@ const projects = [
     live: "https://monkeyshoulder-ad62-git-main-mishsofts-projects.vercel.app/",
     github: "https://github.com/MishSoft/monkeyshoulder",
   },
+
+  {
+    num: "08",
+    categoriy: "frontend",
+    title: "It Support Hub",
+    description:
+      "Welcome to the Computer Helpers project! This website is designed to provide expert advice, tutorials, and support for all your computer needs, including troubleshooting, learning new software, and hardware advice.",
+    stack: [
+      { name: "Next Js" },
+      { name: "TailwindCSS" },
+      { name: "TypeScript" },
+    ],
+    image: "/itsupporthub.svg",
+    live: "https://itsupporthub.vercel.app/",
+    github: "https://github.com/MishSoft/itsupporthub",
+  },
 ];
 
 export default function Projects() {
